@@ -1,0 +1,40 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: acumin-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal; 
+    font-size: 20px;
+
+}
+
+nav{
+    background: #2E4057;
+    margin: 0;
+}
+
+ul{
+    padding:  20px;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+.block{
+    height: 10em;
+}
+
+.block:nth-child(odd){
+    background: #6E8898;
+}
+
+.block:nth-child(even){
+    background-color:#9FB1BC;
+}
