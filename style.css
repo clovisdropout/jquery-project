@@ -9,12 +9,12 @@ body{
 }
 
 nav{
-    background: #2E4057;
+    background: #2e3131	;
     margin: 0;
 }
 
 ul{
-    padding:  20px;
+    padding:  40px;
     margin: 0;
     display: flex;
     justify-content: space-around;
@@ -23,7 +23,7 @@ ul{
 
 a{
     text-decoration: none;
-    color: #ffffff;
+    color: #bdc3c7;
 }
 
 
@@ -32,9 +32,24 @@ a{
 }
 
 .block:nth-child(odd){
-    background: #6E8898;
+    background: #bdc3c7;
 }
 
 .block:nth-child(even){
-    background-color:#9FB1BC;
+    background-color: #dadfe1;
+}
+
+#scrollTop{
+    position: fixed;
+    opacity: 0;
+    bottom: 100px;
+    right: 100px;
+    height: 50px;
+    width: 50px;
+    background: #7acec2;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
 }
