@@ -11,4 +11,11 @@ $(window).on("scroll",function(){
         $("#scrollTop").css("opacity", 0);
     }
     
+
+
 })
+
+
+// lorsque positionY est supérieur à 100 
+    // résuire heugth de la nav
+    // positionner la nav en fixe en haut de la page.
