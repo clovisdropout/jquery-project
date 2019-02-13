@@ -4,7 +4,7 @@ $(window).on("scroll",function(){
     console.log(positionY);
 
     // afficher la fleche en bas
-    if(positionY > 550){
+    if(positionY > 1300){
         $("#scrollTop").css("opacity", 1);
     }
     if(positionY < 550){
@@ -17,9 +17,6 @@ $(window).on("scroll",function(){
 })
 
 
-// lorsque positionY est supérieur à 100 
-    // résuire heigth de la nav
-    // positionner la nav en fixe en haut de la page.
 
     window.onscroll = function() {scrollFunction()};
 
@@ -32,3 +29,56 @@ function scrollFunction() {
     document.getElementById("link").style.fontSize = "35px";
   }
 }
+
+/*
+
+if (positionY > 100){
+  console.log("supérieur à 100")
+}
+
+*/
+
+var slideIndex = 0;
+var slides = $(".slides");
+
+showSlide(slideIndex);
+
+function showSlide(numberSlide){
+    let idSlide = slides[numberSlide].id;
+    $(".slides").removeClass("active");
+    $(`#${idSlide}`).addClass("active");
+}
+
+$(".arrow").on("click",function(){
+    // Si prev
+    if($(this).hasClass("prev")){
+        slideIndex--;
+        if(slideIndex < 0){
+            slideIndex = slides.length - 1;
+        }
+        showSlide(slideIndex);
+    }
+    // Si next
+    if($(this).hasClass("next")){
+        slideIndex++;
+        if(slideIndex > slides.length - 1){
+            slideIndex = 0;
+        }
+        showSlide(slideIndex);
+    }
+})
+
+
+$(function() {
+  var selectedClass = "";
+  $(".fil-cat").click(function(){ 
+  selectedClass = $(this).attr("data-rel"); 
+   $("#portfolio").fadeTo(100, 0.1);
+  $("#portfolio div").not("."+selectedClass).fadeOut().removeClass('scale-anm');
+  setTimeout(function() {
+    $("."+selectedClass).fadeIn().addClass('scale-anm');
+    $("#portfolio").fadeTo(300, 1);
+  }, 300); 
+  
+});
+});
