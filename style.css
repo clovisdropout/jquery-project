@@ -11,7 +11,13 @@ body{
 nav{
     background: #2e3131	;
     margin: 0;
-}
+    overflow: hidden;
+    padding: 90px 10px; /* Large padding which will shrink on scroll (using JS) */
+    transition: 0.4s; /* Adds a transition effect when the padding is decreased */
+    position: fixed; /* Sticky/fixed navbar */
+    width: 100%;
+    top: 0; /* At the top */
+    z-index: 99; }
 
 ul{
     padding:  40px;
@@ -24,6 +30,13 @@ ul{
 a{
     text-decoration: none;
     color: #bdc3c7;
+    float: left;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px; 
+    line-height: 25px;
+    border-radius: 4px;
 }
 
 
